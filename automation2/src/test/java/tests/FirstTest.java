@@ -17,7 +17,7 @@ public class FirstTest {
 	@Test
 	public void test1(){
 		
-		System.setProperty("webdriver.chrome.driver", "/Users/lyubovhrynenko/Documents/automationWorkspace2/automation2/src/test/java/resources/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "/Users/lyubovhrynenko/Documents/automationWorkspace3/automation2/src/test/java/resources/chromedriver");
 		
 		//String phone = ValueGenerator.getRandomPhoneNumber();
 		//String phone2 = ValueGenerator.getUniquePhoneNumber("2123");
