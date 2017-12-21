@@ -1,19 +1,28 @@
 package utils;
 
+import enums.Hobby;
+
 public class Customer {
+	
 	public String firstName;
+	
 	public String lastName;
+	
 	public String country;
-	public String password;
+	
+	public String password = "Chicago1";
+	
 	public String username;
+	
 	public String email;
+	
 	public String phoneNumber;
 	
 	//array
-	public String[] hobby;
+	public Hobby[] hobby;
 	
 	//constructor
-    public Customer(String country1, String[] hobby1) {
+    public Customer(String country1, Hobby[] hobby1) {
     	
     	      System.out.println("creating new customer");
         	  firstName = ValueGenerator.getRandomName(7);

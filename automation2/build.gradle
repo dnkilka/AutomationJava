@@ -25,15 +25,19 @@ dependencies {
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
-    
+ 
     // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver
- compile group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '2.23.0'
+ compile group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '3.8.1'
+ 
+   // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-safari-driver
+compile group: 'org.seleniumhq.selenium', name: 'selenium-safari-driver', version: '2.45.0'
+
  
    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
  compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.1'
  
    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-support
- compile group: 'org.seleniumhq.selenium', name: 'selenium-support', version: '2.23.0'
+compile group: 'org.seleniumhq.selenium', name: 'selenium-support', version: '3.8.1'
  
 }
 

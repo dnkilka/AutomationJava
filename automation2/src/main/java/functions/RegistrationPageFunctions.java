@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 
+import enums.Hobby;
 import pages.RegistrationPage;
 import utils.Customer;
 
@@ -28,32 +29,31 @@ public class RegistrationPageFunctions {
 		driver.findElement(RegistrationPage.usernameInput).sendKeys(customer.username);
 	}
 	
-	public static void selectHobbyCheckbox(WebDriver driver, Customer customer) {
-		String[] hobbies = customer.hobby; 
-		List<String> hobbiesList = Arrays.asList(hobbies); //convert array into list
+	public static void selectHobbyCheckbox(WebDriver driver, Customer customer) {		
+		List<Hobby> hobbies = Arrays.asList(customer.hobby); //convert array into list
 		
-		if(hobbiesList.contains("dance")) {
+		if(hobbies.contains(Hobby.DANCE)) {
 			driver.findElement(RegistrationPage.hobbyDance).click();
 		}
-		if(hobbiesList.contains("reading")) {
+		if(hobbies.contains(Hobby.READING)) {
 			driver.findElement(RegistrationPage.hobbyReading).click();
 		}
-		if(hobbiesList.contains("cricket")) {
+		if(hobbies.contains(Hobby.CRICKET)) {
 			driver.findElement(RegistrationPage.hobbyCricket).click();
 		}
 		
 	}
 	public static void selectHobbyCheckbox1(WebDriver driver, Customer customer) {
-		String[] hobbies = customer.hobby; 
-		for(String hobby : hobbies) {
+		Hobby[] hobbies = customer.hobby; 
+		for(Hobby hobby : hobbies) {
 			switch (hobby) {
-			case "dance":
+			case DANCE:
 				driver.findElement(RegistrationPage.hobbyDance).click();
 				break;
-			case "reading":
+			case READING:
 				driver.findElement(RegistrationPage.hobbyReading).click();
 				break;
-			case "cricket":
+			case CRICKET:
 				driver.findElement(RegistrationPage.hobbyCricket).click();
 				break;
 			default:

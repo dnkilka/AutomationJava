@@ -8,6 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import driver.Driver;
+import enums.Hobby;
 import functions.RegistrationPageFunctions;
 import pages.RegistrationPage;
 import utils.Customer;
@@ -17,16 +19,15 @@ public class FirstTest {
 	@Test
 	public void test1(){
 		
-		System.setProperty("webdriver.chrome.driver", "/Users/lyubovhrynenko/Documents/automationWorkspace3/automation2/src/test/java/resources/chromedriver");
-		
+		//System.setProperty("webdriver.chrome.driver", "/Users/lyubovhrynenko/Documents/automationWorkspace3/automation2/src/test/java/resources/chromedriver");
 		//String phone = ValueGenerator.getRandomPhoneNumber();
 		//String phone2 = ValueGenerator.getUniquePhoneNumber("2123");
 		
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new Driver().getDriver();
 		driver.get("http://demoqa.com/registration/");
 		
 		//String[] hobbies = {"dance","reading","cricket"};
-		String[] hobbies = {"dance","cricket"};
+		Hobby[] hobbies = {Hobby.DANCE, Hobby.READING, Hobby.CRICKET };
 		String country = "Ukraine";
 		Customer customer = new Customer (country, hobbies);
 		
