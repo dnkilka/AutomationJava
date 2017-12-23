@@ -17,7 +17,7 @@ public class Driver {
 			driver = new ChromeDriver();
 			break;
 		case SAFARI:
-			System.setProperty("webdriver.safari.driver", "/Users/lyubovhrynenko/Documents/automationWorkspace3/automation2/src/test/java/resources/safaridriver");
+			//System.setProperty("webdriver.safari.driver", "/Users/lyubovhrynenko/Documents/automationWorkspace3/automation2/src/test/java/resources/safaridriver");
 			driver = new SafariDriver();
 		default:
 			System.out.println("Currently we do not support this browser" + browserToTest);
