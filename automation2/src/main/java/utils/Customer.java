@@ -22,20 +22,20 @@ public class Customer {
 	public Hobby[] hobby;
 	
 	//constructor
-    public Customer(String country1, Hobby[] hobby1) {
-    	
-    	      System.out.println("creating new customer");
-        	  firstName = ValueGenerator.getRandomName(7);
-    	      lastName = ValueGenerator.getRandomName(7);
-    	      password = ValueGenerator.getRandomName(8);
-    	      username = ValueGenerator.getRandomName(8);
-    	      email = ValueGenerator.getRandomEmail("@gmail.com");
-    	      phoneNumber = ValueGenerator.getRandomPhoneNumber();
-          hobby = hobby1;
-    	      country = country1;
-    	
+    public Customer(String country1, Hobby[] hobby1) 
+    {
+    	System.out.println("creating new customer");
+        firstName = ValueGenerator.getRandomName(7);
+    	lastName = ValueGenerator.getRandomName(7);
+    	password = ValueGenerator.getRandomName(8);
+    	username = ValueGenerator.getRandomName(8);
+    	email = ValueGenerator.getRandomEmail("@gmail.com");
+    	phoneNumber = ValueGenerator.getRandomPhoneNumber();
+        hobby = hobby1;
+    	country = country1;
     }
-    public String fullName() {
+    public String fullName() 
+    {
     	  return firstName + " " + lastName;
-    	 }
+    }
 }
